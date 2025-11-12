@@ -9,17 +9,20 @@ def procura(s1, s2):
     instrucoes += 3
     for i in range(len(s1)):
         iteracoes += 1
-        instrucoes += 4
+        instrucoes += 11
         if j == len(s2):
+                    instrucoes += 1
                     return aux
         if s2[j] == s1[i] or s1[i-1] == s2[j]:
             instrucoes += 3
             if aux == -1:
-                instrucoes += 1
                 aux = i
+                instrucoes += 5
                 if s1[i-1] == s2[j]:
+                    instrucoes += 5
                     aux = i-1
                     if s2[j] == s1[i]:
+                        instrucoes += 2
                         j += 1
             j += 1
         else:
